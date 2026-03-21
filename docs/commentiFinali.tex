@@ -1,0 +1,46 @@
+\chapter{Conclusione}
+
+\section{Impressioni sul progetto}
+Ho sempre voluto scrivere un progetto del genere perche' ero interessato a capire veramente il
+funzionamento degli applicativi che utilizziamo tutti i giorni come WhatsApp che trovo molto
+interessanti. Mi sono divertito a cercare gli algoritmi e imparare le implementazioni. Sicuramente
+la parte piu' difficile e' stato lo strutturare bene il codice e cercare di renderlo pulito. In
+generale sono soddisfatto del prodotto ottenuto ma sono consapevole che non sia un prodotto finito
+ma che richieda ancora lavoro per essere considerato utilizzabile. E' stato un bel percorso molto
+interessante che mi ha permesso di imparare diverse cose tipo il discorso sugli hash delle password
+a cui non avevo pensato.
+
+\section{Sviluppi futuri}
+Ci sono moltissime cose da migliorare se volessi rendere questa applicazione veramente pubblica e
+utilizzabile.
+
+\subsection{Algoritmi di cifratura}
+Sicuramente la prima cosa da fare e' rendere veramente sicura la comunicazione implementando AES per
+la cifratura simmetrica e probabilmente Diffie Hellman sulle curve ellittiche per lo scambio delle
+chiavi. Inoltre si dovrebbe mettere la chiave RSA a 4096 bit.
+Un'altra cosa interessante da aggiungere sarebbe di cambiare le chiavi di sessione ogni N messaggi.
+
+\subsection{Comunicazione tra client}
+Al momento la comunicazione tra client non garantisce la forward secrecy perche' utilizzo RSA per
+cifrare la chiave. Potrei utilizzare la stessa implementazione di client e server ma questo
+implicherebbe che per inviare un messaggio a un nuovo utente egli debba essere online visto che
+Diffie Hellman richiede cooperazione. Una cosa realistica che si potrebbe implementare in futuro e'
+un sistema per cui ogni client carica sul server un certo numero di chiavi precalcolate e quando
+qualcuno vuole creare una comunicazione prende una di quelle chiavi usa e getta e si crea la chiave
+privata senza avere il bisogno che il ricevente sia online.
+
+\subsection{Linguaggio}
+Per ottenere la sicurezza dell'applicativo non e' necessario cambiare linguaggio ma sicuramente
+utilizzerei delle librerie gia' fatte che eseguono le istruzioni in C, ad esempio pycryptodome.
+Questo perche' mi rendo conto che il mio codice e' lentissimo a generare i numeri primi grandi e
+purtroppo questo accade principalmente perche' ho usato Python puro senza chiamate a C.
+
+\subsection{UI}
+Sicuramente un miglioramento alla UI e' necessario in quanto non le ho dato alcun peso durante il
+progetto, ho semplicemente usato la libreria tkinter per rendere l'implementazione piu' rapida
+mettendo qualche bottone e qualche textbox. Un ottimo update sarebbe di usare html, js e css per la
+UI.
+
+\subsection{Funzionalita'}
+Una volta creata una buona base si puo' pensare a integrare diverse funzionalita' come lo scambio di
+file e la creazione di gruppi.

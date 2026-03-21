@@ -1,0 +1,26 @@
+\chapter{Design}
+
+\section{Schermata utente}
+
+\subsection{Login}
+Nella schermata di login sara' possibile accedere tramite id e password oppure si potra' creare un
+nuovo utente scegliendo l'id e la password. Una volta eseguito il login si accedera' all'home page.
+
+\subsection{Homepage}
+Nella pagina principale sara' possibile visualizzare tutte le chat passate ed eseguire le seguenti
+azioni:
+\begin{itemize}
+    \item Selezionare una chat e aprire la schermata di dettaglio chat.
+    \item Creare una nuova chat con un utente inserendone l'id.
+\end{itemize}
+
+\subsection{Dettaglio chat}
+Nella schermata di dettaglio di una chat sara' possibile visualizzare lo storico dei messaggi e
+ovviamente sara' possibile inviarne di nuovi.
+
+\section{Database}
+Il server avra' un database interno che contiene tutti gli utenti con relative password. Il server
+manterra' in memoria solo i messaggi non ancora richiesti mentre i client manterranno in un loro db
+locale tutte le conversazioni.
+Il client inoltre avra' un database in cui vengono mantenute le chiavi private scambiate con gli
+altri utenti o con il server.

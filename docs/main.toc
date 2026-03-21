@@ -1,0 +1,59 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Analisi}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduzione}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Obiettivo}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Interazioni}{3}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Requisiti}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Tipologie di messaggi}{4}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Design}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Schermata utente}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Login}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Homepage}{5}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Dettaglio chat}{5}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Database}{5}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Design Dettagliato}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tecnologie utilizzate}{6}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Linguaggio}{6}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Cifratura}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Dettaglio}{7}{subsection.3.2.1}%
+\contentsline {subsubsection}{RSA}{7}{section*.2}%
+\contentsline {subsubsection}{Diffie Hellman}{8}{section*.3}%
+\contentsline {subsubsection}{Generazione numeri primi}{8}{section*.4}%
+\contentsline {subsubsection}{DES}{9}{section*.5}%
+\contentsline {section}{\numberline {3.3}Interazioni}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Tipologia di messaggi}{10}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Protocollo scambio di chiavi}{11}{subsection.3.3.2}%
+\contentsline {subsubsection}{Scambio tra client e server}{11}{section*.6}%
+\contentsline {subsubsection}{Registrazione}{13}{section*.7}%
+\contentsline {subsubsection}{Login}{14}{section*.8}%
+\contentsline {subsubsection}{Comunicazione tra client}{15}{section*.9}%
+\contentsline {subsubsection}{Invio e richiesta messaggi}{16}{section*.10}%
+\contentsline {section}{\numberline {3.4}Database}{16}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Tecnologie}{16}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Server}{17}{subsection.3.4.2}%
+\contentsline {subsubsection}{Password Hashing}{17}{section*.11}%
+\contentsline {subsection}{\numberline {3.4.3}Client}{18}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Server}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Message router}{19}{subsection.3.5.1}%
+\contentsline {subsubsection}{Handlers}{19}{section*.12}%
+\contentsline {subsection}{\numberline {3.5.2}Connection Handler}{20}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Client}{21}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Server Connection}{21}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Client}{21}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Configurazione e Costanti}{22}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Testing}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cifratura}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Altro}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Handshake}{23}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Connection Handler}{23}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Message router}{23}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Test di accesso non autorizzato}{24}{subsection.4.2.4}%
+\contentsline {chapter}{\numberline {5}Conclusione}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Impressioni sul progetto}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sviluppi futuri}{25}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Algoritmi di cifratura}{25}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Comunicazione tra client}{26}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Linguaggio}{26}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}UI}{26}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Funzionalita'}{26}{subsection.5.2.5}%

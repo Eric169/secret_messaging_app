@@ -1,0 +1,30 @@
+\chapter{Testing}
+In questa sezione vedremo quali test ho eseguito per verificare la correttezza degli algoritmi.
+Per implementare i test ho deciso di utilizzare la libreria unittest di python con
+eventualmente dei mock presi sempre dalla libreria unittest.
+
+\section{Cifratura}
+Per quanto riguarda la cifratura ho deciso di eseguire unit tests su tutti gli algoritmi
+implementati. In particolare ho eseguito test di cifratura e decifratura per DES e RSA. Inoltre ho
+testato la verifica della firma per RSA e il corretto scambio di chiavi per DH.
+
+\section{Altro}
+
+\subsection{Handshake}
+Ho eseguito unittest anche per quanto riguarda Client e Server Handshake per verificare il corretto
+scambio delle chiavi e la corretta verifica della firma.
+
+\subsection{Connection Handler}
+Ho deciso di testare il ConnectionHandler per verificare il corretto invio e ricezione di messaggi e
+anche il corretto scambio di chiavi tramite handshake.
+
+\subsection{Message router}
+Ovviamente ho testato anche il router per verificare il corretto routing.
+
+\subsection{Test di accesso non autorizzato}
+Fortunatamente ho pensato all'idea di manomettere l'invio dei messaggi richiedendo messaggi di
+altri utenti o inviando messaggi facendo finta di essere altri senza aver fatto il login. Una volta
+testato mi sono accorto che il mio codice aveva un bug perche' non manteneva correttamente le
+sessioni e non veniva controllato che il login doveva essere fatto dall'utente di cui si
+richiedevano i messaggi. Quindi e' presente anche un test per controllare gli accessi non
+autorizzati.

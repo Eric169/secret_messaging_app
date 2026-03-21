@@ -1,0 +1,42 @@
+\chapter{Analisi}
+
+\section{Introduzione}
+
+\subsection{Obiettivo}
+Si vuole realizzare un’applicazione di messaggistica sicura. L’applicazione
+dovra’ gestire un server che fa da tramite e si occupa della ricezione e invio dei messaggi agli
+utenti che vogliono comunicare. In questo documento spieghero' nel dettaglio il design,
+l'implementazione e le motivazioni delle scelte fatte riguardo le tecnologie utilizzate e gli
+algoritmi implementati.
+
+\subsection{Interazioni}
+Ci sono 2 tipi di entita', client e server. Ogni client potra' inviare diverse tipologie di messaggi
+al server che indicheranno le azioni da fare, ad esempio la registrazione di un nuovo utente,
+l'invio di un messaggio, lo scambio di chiavi e diverse altre che vedremo nel dettaglio piu' avanti.
+
+\section{Requisiti}
+L'applicazione dovra' garantire:
+\begin{itemize}
+    \item Confidenzialita': nessuno esterno alla comunicazione deve essere in grado di leggere il
+    contenuto dei messaggi scambiati.
+    \item Integrita': vogliamo garantire che tutti i messaggi arrivino correttamente.
+    \item Identificazione: il server deve essere sicuro dell'identita' dell'utente e viceversa.
+\end{itemize}
+
+\section{Tipologie di messaggi}
+Ci sono diverse tipologie di messaggi che l'utente puo' mandare al server e vice versa, in questa
+sezione tratteremo i tipi di messaggi che l'utente puo' vedere e decidere di inviare, i messaggi che
+sono under the hood saranno spiegati nel dettaglio del design e dell'implementazione.
+
+\begin{itemize}
+    \item Register [id, password]: il messaggio di register permette di registrare un nuovo utente
+    con un id univoco e una password. A questo messaggio corrisponde una risposta del server con
+    conferma di esecuzione oppure con rifiuto piu' tipo di errore.
+    \item Login [id, password]: il messaggio di login permette di accedere a un account dato l'id e
+    la password, anche in questo caso il server rispondera' con un messaggio di successo oppure di
+    fallimento con relativo errore.
+    \item Send message [id, message]: permette di inviare un messaggio all'utente con l'id
+    specificato.
+\end{itemize}
+I messaggi che il server invia ai client sono tutte risposte a comandi ricevuti oppure servono per
+gli scambi di chiavi che saranno approfonditi successivamente.

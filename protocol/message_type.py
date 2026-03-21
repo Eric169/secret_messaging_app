@@ -1,0 +1,16 @@
+from enum import Enum
+
+class MessageType(Enum):
+
+    CLIENT_HELLO = "CLIENT_HELLO"
+    SERVER_HELLO = "SERVER_HELLO"
+
+    REGISTER = "REGISTER"
+    LOGIN = "LOGIN"
+
+    SEND_MESSAGE = "SEND_MESSAGE"
+    GET_MESSAGES = "GET_MESSAGES"
+    GET_PUBLIC_KEY = "GET_PUBLIC_KEY"
+
+    OK = "OK"
+    ERROR = "ERROR"
