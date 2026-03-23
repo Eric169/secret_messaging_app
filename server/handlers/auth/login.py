@@ -14,7 +14,6 @@ def login_handler(message: Message, context) -> Message:
     if not username or not password_hash:
         return Message(MessageType.ERROR, {"error": "Missing login data"})
 
-
     conn = db.get_connection()
     cursor = conn.cursor()
     

@@ -1,6 +1,7 @@
 import socket
 import threading
-from common.config import SERVER_HOST, SERVER_PORT, SERVER_RSA_N, SERVER_RSA_E
+from common.config import SERVER_HOST, SERVER_PORT, SERVER_RSA_N
+from common.constants import RSA_E
 from server.config import SERVER_RSA_D
 from crypto.rsa.rsa import RSA
 from server.connection_handler import ConnectionHandler
@@ -19,7 +20,7 @@ def start_server():
     db.init_db()
 
     print("Loading static RSA keys...")
-    server_rsa = RSA(SERVER_RSA_N, SERVER_RSA_E, SERVER_RSA_D)
+    server_rsa = RSA(SERVER_RSA_N, RSA_E, SERVER_RSA_D)
     print("RSA keys loaded.")
 
     router = MessageRouter()

@@ -1,7 +1,6 @@
 from enum import Enum
 
 class MessageType(Enum):
-
     CLIENT_HELLO = "CLIENT_HELLO"
     SERVER_HELLO = "SERVER_HELLO"
 

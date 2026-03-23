@@ -2,7 +2,7 @@ from crypto.math_utils.math_utils import *
 from common.utils import split_blocks
 
 class RSA:
-    def __init__(self, n: int, e: int, d=None):
+    def __init__(self, n: int, e: int, d: int | None = None):
         self.n = n
         self.e = e
         self.d = d
@@ -35,9 +35,6 @@ class RSA:
 
         return result.lstrip(b"\x00")
 
-
-        
-    
     def __decrypt_block(self, block: int) -> int:
         if (self.d is None):
             raise Exception("Private key is missing")

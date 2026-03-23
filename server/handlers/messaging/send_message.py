@@ -11,8 +11,6 @@ def send_message_handler(message: Message, context) -> Message:
     sender = message.payload.get("sender")
     ciphertext = message.payload.get("ciphertext")
     authenticated_user = context.get("username")
-    
-    # print(f"[DEBUG] SEND_MESSAGE verify: AuthUser={authenticated_user}, Sender={sender}, Context ID={id(context)}")
 
     if not recipient or not sender or not ciphertext:
         return Message(MessageType.ERROR, {"error": "Missing message data"})

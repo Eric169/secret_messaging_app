@@ -20,8 +20,7 @@ def init_db():
     conn = get_connection()
 
     cursor = conn.cursor()
-    
-    # Peer users table: username, public_rsa_n, public_rsa_e, session_key
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS users (
             username TEXT PRIMARY KEY,
@@ -30,8 +29,7 @@ def init_db():
             session_key TEXT
         )
     ''')
-    
-    # Messages table: sender, receiver, plaintext, timestamp
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS messages (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -41,8 +39,7 @@ def init_db():
             timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
         )
     ''')
-    
-    # Local identity table: username, private_rsa_n, private_rsa_e, private_rsa_d
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS local_identity (
             username TEXT PRIMARY KEY,

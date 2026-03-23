@@ -2,7 +2,6 @@ import secrets
 from crypto.math_utils.math_utils import mod_exp
 
 class DiffieHellman:
-    
     def __init__(self, p: int, g: int):
         self.p = p
         self.g = g

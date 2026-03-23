@@ -21,7 +21,7 @@ def pre_hash_password(password: str, salt: str) -> str:
     h = sha256(f"{password}{salt}".encode())
     return h.hexdigest()
 
-def hash_password(password: str, salt: str = None, iterations: int = 100000) -> str:
+def hash_password(password: str, salt: str | None = None, iterations: int = 100000) -> str:
     if salt is None:
         salt_bytes = secrets.token_bytes(16)
         salt = salt_bytes.hex()

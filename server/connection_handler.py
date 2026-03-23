@@ -32,7 +32,7 @@ class ConnectionHandler:
         finally:
             self.client_socket.close()
 
-    def __perform_handshake(self):
+    def __perform_handshake(self) -> None:
         handshake = HandshakeServer(self.server_rsa)
 
         msg = self.__recv_message(encrypted=False)
@@ -51,7 +51,7 @@ class ConnectionHandler:
         key_bits = int_to_bits(key_hash, 256)[:64]
         self.des = DES(key_bits)
 
-    def __message_loop(self):
+    def __message_loop(self) -> None:
         while True:
             try:
                 msg = self.__recv_message(encrypted=True)
@@ -66,7 +66,7 @@ class ConnectionHandler:
                 print(f"Error in message loop: {e}")
                 break
 
-    def __send_message(self, message: Message, encrypted=False):
+    def __send_message(self, message: Message, encrypted: bool = False) -> None:
         data = serialize(message)
         
         if encrypted and self.des:
@@ -76,7 +76,7 @@ class ConnectionHandler:
         header = struct.pack("!I", length)
         self.client_socket.sendall(header + data)
 
-    def __recv_message(self, encrypted=False) -> Message:
+    def __recv_message(self, encrypted: bool = False) -> Message:
         header = self.__recv_all(HEADER_LENGTH)
         if not header:
             raise EOFError("Client closed connection")
@@ -92,7 +92,7 @@ class ConnectionHandler:
 
         return deserialize(data)
 
-    def __recv_all(self, n):
+    def __recv_all(self, n: int) -> bytes | None:
         data = b""
         while len(data) < n:
             packet = self.client_socket.recv(n - len(data))

@@ -13,7 +13,6 @@ def xor(a: list[bool], b: list[bool]) -> list[bool]:
 def expand(bits: list[bool], table: list[int]) -> list[bool]:
     return [bits[i - 1] for i in table]
 
-
 def substitute(bits: list[bool], SBOXES: list[list[int]]) -> list[bool]:
     output = []
 
@@ -53,7 +52,6 @@ def unpad(data: bytes, block_size: int = DES_BLOCK_SIZE) -> bytes:
         return data[:-padding_len]
     else:
         return data
-
 
 def bytes_to_bits(data: bytes) -> list[bool]:
     bits = []

@@ -23,7 +23,6 @@ class HandshakeClient:
         }
 
         signature = self.rsa.sign(hash_payload(payload))
-
         payload["signature"] = signature
 
         return Message(MessageType.CLIENT_HELLO, payload)
@@ -36,7 +35,6 @@ class HandshakeClient:
             raise Exception("Invalid signature")
 
         shared = self.dh.compute_shared(B)
-
         return shared
     
     def __verify_server_signature(self, B: int, signature: int) -> bool:
@@ -64,7 +62,6 @@ class HandshakeServer:
             raise Exception("Invalid signature")
 
         self.dh = DiffieHellman(p, g)
-
         self.A = A
 
     def create_server_hello(self) -> Message:

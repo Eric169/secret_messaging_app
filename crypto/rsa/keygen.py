@@ -1,8 +1,9 @@
 from crypto.primes.prime_generator import *
 from crypto.math_utils.math_utils import *
+from common.constants import RSA_E
 
 def get_rsa_key(bits: int) -> tuple[int, int, int]:
-    e = 65537
+    e = RSA_E
 
     p = get_prime(bits)
     q = get_prime(bits)

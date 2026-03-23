@@ -1,5 +1,4 @@
 
-
 def mod_exp(base: int, exp: int, mod: int) -> int:
     return pow(base, exp, mod)
 

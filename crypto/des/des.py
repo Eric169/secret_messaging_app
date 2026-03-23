@@ -58,10 +58,10 @@ class DES:
 
         return plaintext.decode()
 
-    def __encrypt_block(self, block: list[bool]):
+    def __encrypt_block(self, block: list[bool]) -> list[bool]:
         return self.__encryption_decryption(block, True)
 
-    def __decrypt_block(self, block: list[bool]):
+    def __decrypt_block(self, block: list[bool]) -> list[bool]:
         return self.__encryption_decryption(block, False)
 
     def __encryption_decryption(self, block: list[bool], encrypt: bool) -> list[bool]:

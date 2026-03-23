@@ -8,8 +8,6 @@ def get_messages_handler(message: Message, context) -> Message:
 
     username = message.payload.get("username")
     authenticated_user = context.get("username")
-    
-    # print(f"[DEBUG] GET_MESSAGES verify: AuthUser={authenticated_user}, TargetUser={username}, Context ID={id(context)}", flush=True)
 
     if not username:
         return Message(MessageType.ERROR, {"error": "Missing username"})
@@ -25,7 +23,6 @@ def get_messages_handler(message: Message, context) -> Message:
     
     messages = [{"sender": r[0], "ciphertext": r[1], "timestamp": r[2]} for r in rows]
     
-    # Clear messages once fetched
     cursor.execute("DELETE FROM messages WHERE recipient = ?", (username,))
     conn.commit()
     conn.close()

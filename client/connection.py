@@ -7,8 +7,8 @@ from protocol.handshake import HandshakeClient
 from protocol.hash_helper import hash_values
 from crypto.des.des import DES
 from common.utils import int_to_bits
-from common.constants import HEADER_LENGTH, ENCODING, DH_GENERATOR, DH_P
-from common.config import SERVER_RSA_N, SERVER_RSA_E
+from common.constants import HEADER_LENGTH, ENCODING, DH_GENERATOR, DH_P, RSA_E
+from common.config import SERVER_RSA_N
 from crypto.rsa.rsa import RSA
 from crypto.diffie_hellman.diffie_hellman import DiffieHellman
 from protocol.hash_helper import hash_values
@@ -28,7 +28,7 @@ class ServerConnection:
         self.__perform_handshake()
 
     def __perform_handshake(self) -> None:
-        server_pub_rsa = RSA(SERVER_RSA_N, SERVER_RSA_E)
+        server_pub_rsa = RSA(SERVER_RSA_N, RSA_E)
         
         handshake = HandshakeClient(self.client_rsa, self.dh, server_pub_rsa)
         
