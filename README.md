@@ -36,7 +36,7 @@ python3 -m client.client
 The GUI will allow you to register a new user or login with an existing one.
 
 > [!TIP]
-> Registration can take a significant amount of time (10-30 seconds) because the pure Python implementation generates 2048-bit random primes for RSA keys. For faster testing, two users are pre-registered:
+> Registration can take a significant amount of time (30-60 seconds) because the pure Python implementation generates 2048-bit random primes for RSA keys. For faster testing, two users are pre-registered:
 > - **Username**: `alice`, **Password**: `alice123`
 > - **Username**: `bob`, **Password**: `bob456`
 
@@ -58,6 +58,3 @@ Run the full test suite using:
 ```bash
 python3 -m unittest discover tests
 ```
-
----
-*Developed for the University Cryptography Course.*
